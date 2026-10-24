@@ -35,3 +35,4 @@ label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
 .chart{height:120px;display:flex;align-items:flex-end;gap:6px;padding-top:8px}.bar{flex:1;background:#334155;border-radius:6px 6px 2px 2px;min-height:3px;position:relative}.bar span{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);font-size:10px;color:#94a3b8}
 .hidden{display:none!important}
 @media (max-width:360px){.grid2{grid-template-columns:1fr}.title{font-size:20px}.big{font-size:23px}}
+

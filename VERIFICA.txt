@@ -1,0 +1,43 @@
+VERIFICA BETA 0.2 — 24 ottobre 2026
+
+Controllo di sintassi JavaScript superato per app.js e sw.js.
+
+13 gruppi di test automatici superati:
+1. Schede A/B/C: numero serie, range ripetizioni, recuperi e cardio.
+2. Protezione di una seduta aperta dall'avvio di un'altra seduta.
+3. Peso ereditato e completamento solo dopo tutte le serie.
+4. Riapertura completati, doppio ritorno alla lista e modifica dati.
+5. Ricalcolo suggerimenti dopo correzione, persistenza e timer invariato.
+6. Rifiuto di peso vuoto/negativo e ripetizioni zero/decimali.
+7. Timer: countdown, tempo extra positivo, +30 secondi e riavvio app.
+8. Macchina occupata, avviso cambio gruppo, palestra affollata e recupero.
+9. Chiusura parziale, consultazione e correzione di una seduta archiviata.
+10. Caricamento di un salvataggio Beta 0.1 con storico, seduta aperta,
+    misure e timer senza modificarne i dati. Stessa chiave di salvataggio.
+11. Cardio outdoor: salvataggio e calcolo del passo medio.
+12. Cardio non valido respinto senza alterare dati già completati.
+13. Asset offline presenti e dimensioni PNG corrispondenti al manifest.
+
+Test interattivi nel browser su anteprima locale:
+- Avvio scheda A, apertura Leg Press, registrazione di tre serie.
+- Ereditarietà: 80 kg nelle serie successive alla prima.
+- Suggerimento di aumento dopo 12/12/12 ripetizioni.
+- Ritorno alla lista dal pulsante inferiore e riapertura esercizio completato.
+- Correzione prima serie a 75 kg / 10 ripetizioni: suggerimento Mantieni.
+- La correzione non riavvia il recupero.
+- Dopo ricaricamento seduta e timer restano disponibili.
+- Timer osservato anche dopo lo zero con TEMPO EXTRA positivo.
+- Chiusura con attività mancanti: conferma prima dell'archiviazione.
+- Storico consultabile con i dati corretti.
+- Verifica leggibilità nel viewport smartphone 390 × 844.
+- Server locale spento: ricaricamento app riuscito, storico e correzioni
+  ancora disponibili grazie al service worker.
+
+Limiti della verifica:
+- Test di compatibilità eseguito su dati di prova nel formato della Beta 0.1;
+  i dati reali del telefono di Luca non sono stati letti o trasferiti.
+- Pubblicazione GitHub Pages e installazione su iPhone/Android non eseguite.
+- Nessun dato generato durante i test è incluso nello ZIP.
+
+I test automatici riproducibili sono nel file verify-beta.cjs del workspace,
+separato dai file statici da caricare su GitHub Pages.
